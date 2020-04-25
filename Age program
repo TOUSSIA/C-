@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Age_program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter Your Birthday Year  :  "); /// message to user in ''INPUT'' form
+            int Birthday  = Convert.ToInt32(Console.ReadLine()); /// Input For Birthday
+            int CurrentYear = 2020; /// Fixing Actual Year
+            Console.Write("Your Age Is  :  "); /// message to show Result
+            int YourAge = CurrentYear - Birthday; /// The operation
+            Console.WriteLine(YourAge); /// Your Age Value
+            Console.ReadKey();
+            /////////////////////////////////////////////
+            ///Another Detailed Form 
+            
+            
+            DateTime MyAge;  /// using DateTime Fueatures
+            Console.Write("Enter Your Birthday Date Y/M/D : "); ///Message To user
+            MyAge = Convert.ToDateTime(Console.ReadLine()); /// Convert MyAge from string to int
+            int ActualYear =Convert.ToInt32( DateTime.UtcNow.Subtract(MyAge).TotalDays)/365; 
+            Console.WriteLine("Your Age is : " + ActualYear + "  Years Old");
+            int Totaldays = ActualYear;
+            Totaldays = Convert.ToInt32(DateTime.UtcNow.Subtract(MyAge).TotalDays);
+            Console.WriteLine("Your Age is : " + Totaldays + " Days");
+            int TotalHours = ActualYear;
+            TotalHours = Convert.ToInt32(DateTime.UtcNow.Subtract(MyAge).TotalHours);
+            Console.Write("Your Age is : " + TotalHours + " Hours");
+            Console.ReadKey();
+        }
+    }
