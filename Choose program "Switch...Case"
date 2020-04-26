@@ -1,0 +1,25 @@
+using System;
+namespace increment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("CHOOSE Operation  :  1= ADD     2 = Remove   3 = EDIT");
+            int Choose = Convert.ToInt32(Console.ReadLine()); 
+            switch (Choose)
+            {
+                case 1: Console.Write("Add");
+                    break;
+                case 2:
+                    Console.Write("Remove");
+                    break;
+                case 3:
+                    Console.Write("Edit");
+                    break;
+              }
+            
+            Console.ReadKey();
+        }
+    }
+}
