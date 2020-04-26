@@ -1,0 +1,19 @@
+using System;
+namespace increment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 2;
+            i =i+1;
+            Console.WriteLine(i);
+            while (i < 10)
+            {
+                i = i + 1;
+                Console.WriteLine(i);
+            }   
+            Console.ReadKey();
+        }
+    }
+}
