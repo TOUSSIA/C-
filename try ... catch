@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace string_handling
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            try    /// First Try This 
+            {
+                Console.Write("Enter Number Here : ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                if ( num == 0)                    /// If its show this 
+                    {
+                    Console.WriteLine("i will pass");
+                    Console.ReadKey();
+                     }
+                if (num != 0)                  
+                {
+                    Console.WriteLine("i will not pass");
+                    Console.ReadKey();
+                }
+
+            }
+            catch (Exception )    /// if not Dont crash instead Show this .
+            {
+                Console.WriteLine("incorrect number");
+                Console.ReadKey();
+            }
+        }    
+    }
+}
