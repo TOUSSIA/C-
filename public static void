@@ -1,0 +1,25 @@
+using System;
+
+
+namespace string_handling
+{
+    class Program
+    {
+        public static void RequestName() /// use this form to creat common function
+        {
+            Console.Write("Enter User Name : ");
+            Console.Read();
+            
+        }
+
+        static void Main(string[] args) 
+        {
+            RequestName(); //// use the common function with out rewrite it 
+            RequestName();
+            RequestName();
+            RequestName();
+            RequestName();
+            Console.ReadKey(); 
+        }    
+    }
+}
