@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter A Number : ");
+            int number =int.Parse(Console.ReadLine());
+            string number5 =Convert.ToString(number); 
+            int i = 0;
+            for ( i =0; i<11; i=i+1)
+            {
+                Console.WriteLine(number5+ "x"+i+"="+(number*i));
+               
+            }
+            Console.Read();
+        }
+    }
+}
