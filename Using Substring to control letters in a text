@@ -1,0 +1,23 @@
+using System;
+
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter A text :");            /// 1- User Friendly Message to input Text.
+            string text = Console.ReadLine();           /// 2- Set the inputed Text  to a variable "text".
+            var first_letter = text.Substring(0, 3);    /// 3- Create a variable and sets it to letters of the text with command Substring
+                                                               (0 = place of letter , 3 = how many letters).
+            Console.WriteLine(first_letter);            /// 4- Display the Outcome.
+            
+            
+            Console.WriteLine("Press Any Key To Exit");
+            Console.ReadKey();
+        }
+       
+    }
+}
