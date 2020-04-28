@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           ///Hello This program checks if  the numbers are  > 0 
+            int firstinteger;
+            Console.Write("Input first integer : ");
+            firstinteger =Convert.ToInt32(Console.ReadLine());
+            
+            
+            int secondinteger;
+            Console.Write("Input second integer : ");
+               secondinteger = Convert.ToInt32(Console.ReadLine());
+            
+            if  (firstinteger>0 && secondinteger>0)
+            {
+                Console.WriteLine("True");
+            }
+            else 
+
+             Console.WriteLine("False");
+            
+
+        
+        
+
+
+
+            Console.WriteLine("Press Any Key To Exit");
+            Console.ReadKey();
+        }
+       
+    }
+}
