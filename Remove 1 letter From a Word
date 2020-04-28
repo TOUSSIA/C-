@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string word = "w3resource";
+            Console.WriteLine(remove_char(word, 9));
+           
+            Console.WriteLine("Press Any Key To Exit ...");
+            Console.ReadKey(); 
+        }
+        public static string remove_char(string str, int word)
+        {
+            return str.Remove(word,1);
+        }
+    }
+}
