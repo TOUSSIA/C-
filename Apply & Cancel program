@@ -1,0 +1,17 @@
+Public Class Form1
+    Dim ShowResult As String
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MessageBox.Show("Welcome" + NameBox.Text + "Your Age is :" + AgeBox.Value)
+
+    End Sub
+
+    Private Sub ButtonApply_Click(sender As Object, e As EventArgs) Handles ButtonApply.Click
+        MessageBox.Show("Welcome " + NameBox.Text + "," + "  Your Age is :  " + Convert.ToString(AgeBox.Value))
+
+    End Sub
+
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
+        Application.Exit()
+
+    End Sub
+End Class
