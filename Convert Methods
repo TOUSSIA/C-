@@ -1,0 +1,15 @@
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim name = "Toufik"
+        Dim Age = 33
+        Dim Birthday = "18 / 01 / 1987"
+        Console.WriteLine("My Name Is : " & name.ToUpper & "  i'm " & CStr(Age) & " i was born in : " & Birthday)
+        Console.WriteLine("My Name is : " & name.ToUpper & "  i'm " & Age.ToString & " i was born in : " & Birthday)
+        Console.WriteLine("My Name is : " & name.ToUpper & "  i'm " & Convert.ToString(Age) & " i was born in : " & Birthday)
+
+        Console.ReadKey()
+
+    End Sub
+End Module
