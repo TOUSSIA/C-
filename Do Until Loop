@@ -1,0 +1,10 @@
+Module Program
+    Sub Main(args As String())
+        Dim Number As Integer = Console.ReadLine()
+        Do Until Number = 10
+            Number = Number * 2
+            Console.WriteLine(Number)
+        Loop
+
+    End Sub
+End Module
