@@ -1,0 +1,20 @@
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine("Choose Your Opetarion : 1-add  2-Subtract  3-Multiply")
+        Dim UserChoice As String = Console.ReadLine()
+        Try
+            If UserChoice = 1 Then
+                Console.WriteLine("ADD")
+            ElseIf UserChoice = 2 Then
+                Console.WriteLine("Subtract")
+            ElseIf UserChoice = 3 Then
+                Console.WriteLine("Multiply")
+            Else
+                Console.WriteLine("You Entred Wrong Character")
+            End If
+
+        Catch
+            Console.WriteLine("You Entred Wrong Character")
+        End Try
