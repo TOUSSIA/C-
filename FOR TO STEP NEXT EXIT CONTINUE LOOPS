@@ -1,0 +1,44 @@
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim A As Integer
+        Dim C As Integer
+        Dim R As Integer
+
+        C = Console.ReadLine()
+        For A = 0 To 10  'NORMAL LOOP
+            R = C * A
+            Console.WriteLine(R)
+        Next
+        Console.WriteLine("")
+        Console.WriteLine("")
+        Console.WriteLine("")
+        For A = 11 To 20  'NEXT CONTINUE THE LOOP YOU CANCHANGE ITS PARAMS
+            R = C * A
+            Console.WriteLine(R)
+
+        Next
+        Console.WriteLine("")
+        Console.WriteLine("")
+        Console.WriteLine("")
+        For A = 0 To 50 Step 5
+            R = C + A
+            Console.WriteLine(R)
+            If R = 50 Then
+                Exit For 'YOU CAN STOP THE LOOP  WITH EXIT FOR
+            End If
+        Next
+        Console.WriteLine("")
+        Console.WriteLine("")
+        Console.WriteLine("")
+        For A = 0 To 20
+            R = C + A
+            If R = 10 Then
+                Continue For 'YOU CAN CONTINUE OVERPASSING THIS CONDITION
+            End If
+            Console.WriteLine(R)
+        Next
+
+    End Sub
+End Module
