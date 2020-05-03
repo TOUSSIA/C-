@@ -1,0 +1,45 @@
+Public Class Form1
+    
+    ///ADD DATA on DataGridView///
+    
+    Private Sub Buttonadd_Click(sender As Object, e As EventArgs) Handles Buttonadd.Click
+        DataGridView1.Rows.Add(NameBox.Text, PriceBox.Text, ExpBox.Text)
+        NameBox.Clear()
+        PriceBox.Clear()
+        ExpBox.Clear()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+   /////Clear Button////
+   Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
+        NameBox.Clear()
+        PriceBox.Clear()
+        ExpBox.Clear()
+    End Sub
+
+  ///  Remove Button ////
+
+    Private Sub ButtonRemove_Click(sender As Object, e As EventArgs) Handles ButtonRemove.Click
+        For Each row As DataGridViewRow In DataGridView1.SelectedRows
+            DataGridView1.Rows.Remove(row)
+        Next
+    End Sub
+
+  //// Standard Exit Button
+  
+  Private Sub ButtonExit_Click(sender As Object, e As EventArgs) Handles ButtonExit.Click
+        Dim iExit As DialogResult
+        iExit = MessageBox.Show("Confirm Exit", "Print Datagridview", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        If iExit = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+End Class
