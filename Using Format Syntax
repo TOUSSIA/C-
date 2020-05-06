@@ -1,0 +1,5 @@
+Console.WriteLine("My Name is {0} And My Password is {1}", Username, Password) 'Using Format Syntax
+
+Dim Mypay As Double = 29000.321654987
+        Console.WriteLine("My pay is : " & String.Format("{0:n2}", Mypay)) 
+        'Syntax To use Format with money (0 = left numbers befor the period:n2=  2 numbers behind the period)
