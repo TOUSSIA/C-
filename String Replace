@@ -1,0 +1,5 @@
+Dim MyWord As String
+        Dim Replacingsyntax As String
+        MyWord = "Hello, Toussia"
+        Replacingsyntax = MyWord.Replace("Toussia", "Assia")  ' 2nd variable =1st variable.Replace(Old value,New Value) 
+        Console.WriteLine(Replacingsyntax)
