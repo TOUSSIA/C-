@@ -1,0 +1,41 @@
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        
+        
+        Console.Write("Enter First Number :")
+        Dim FirstNumber As Double
+        FirstNumber = Console.ReadLine()
+        
+        
+        Console.Write("Enter Second Number : ")
+        Dim SecondNumber As Double
+        SecondNumber = Console.ReadLine()
+        
+        
+        Dim Mathoperator As String
+        Console.WriteLine("Enter The Operation  : 1 = Addition , 2 = Subtract , 3= Devide , 4 = Multiply")
+        Mathoperator = Console.ReadLine()
+       
+       
+       Dim Result As Double
+        If Mathoperator = "1" Then
+            Result = FirstNumber + SecondNumber
+            Console.WriteLine("Result is =" & Result)
+        ElseIf Mathoperator = "2" Then
+            Result = FirstNumber - SecondNumber
+            Console.WriteLine("Result is =" & Result)
+        ElseIf Mathoperator = "3" Then
+            Result = FirstNumber / SecondNumber
+            Console.WriteLine("Result is =" & Result)
+        ElseIf Mathoperator = "4" Then
+            Result = FirstNumber * SecondNumber
+            Console.WriteLine("Result is =" & Result)
+        End If
+
+
+
+
+    End Sub
+End Module
