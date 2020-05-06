@@ -1,0 +1,2 @@
+Console.WriteLine(Password.Length) 'Syntax to  count String Length
+        Console.WriteLine(Password.Substring(0, 1) + Password.Substring(0, 1)) 'Syntax to get letters from word (0 = index postion , 1 = number of letters)
