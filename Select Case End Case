@@ -1,0 +1,21 @@
+/// Helps with multiple TAsks
+Imports System
+
+Module Program
+   
+   Sub Main(args As String())
+        Dim Number1 As Integer = Console.ReadLine()
+        Dim Number2 As Integer = Console.ReadLine()
+        Dim Result As Integer = Console.ReadLine()
+       
+       Select Case Result
+            Case 0
+                Result = Number1 + Number2
+                Console.Write("This is the Result ")
+                Console.WriteLine(Result)
+            Case 1
+                Result = Number1 - Number2
+                Console.Write("This is the Result ")
+                Console.WriteLine(Result)
+
+        End Select
