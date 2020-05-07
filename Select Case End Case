@@ -17,5 +17,7 @@ Module Program
                 Result = Number1 - Number2
                 Console.Write("This is the Result ")
                 Console.WriteLine(Result)
+            Case Else
+                Console.WriteLine("Wrong Entry")
 
         End Select
