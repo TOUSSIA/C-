@@ -1,0 +1,33 @@
+With a label and a button
+
+*********Create a directory*********** 
+Imports System.IO
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Directory.CreateDirectory("H:\Learning VB")  OR MkDir("H:\Learning VB")  
+    End Sub
+End Class
+
+
+**************Search a File***************
+With Label = Search File + TextBox = TextBox.Text + Button = Search 
+
+Button = Search 
+Private Sub Searchbtn_Click(sender As Object, e As EventArgs) Handles Searchbtn.Click
+        If File.Exists("H:\" + Searchinput.Text) Then
+            MsgBox("You Want To Open File", vbQuestion + vbYesNo + vbDefaultButton2, "File Found")
+            Process.Start("H:\" + Searchinput.Text)
+        Else
+            MessageBox.Show("File Not Found", "Error")
+        End If
+    End Sub
+
+
+
+***************Copy Directory************
+ MUST NOT BE EMPTY
+ 
+ My.Computer.FileSystem.CopyDirectory("C:\TestDirectory1", "C:\TestDirectory2", True)
+ 
+ 
+ 
