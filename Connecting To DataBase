@@ -1,0 +1,45 @@
+Put it as new class in your project 
+
+Imports System.Data.OleDb
+Public Class DBControl
+    'Create DB connection
+    Private DBCon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=Products.accdb;")
+    'Create DB Command
+    Private DBCmd As OleDbCommand
+    'DB DATA STORE
+    Public DBDATA As OleDbDataAdapter
+    Public DBDTable As DataTable
+    'Query Params
+    Public Params As New List(Of OleDbParameter)
+    'Query Stats
+    Public RecordCount As Integer
+    Public Exception As String
+    Public Sub ExecQuery(Query As String)
+        'Reset Query Stats
+        RecordCount = 0
+        Exception = ""
+        Try
+            'Open Connection
+            DBCon.Open()
+            'Create BD Command 
+            DBCmd = New OleDbCommand(Query, DBCon)
+            'Load Params into DB Command
+            Params.ForEach(Sub(p) DBCmd.Parameters.Add(p))
+            'Clear Params List
+            Params.Clear()
+            'Execute Command & Fill DataTable
+            DBDTable = New DataTable
+            DBDATA = New OleDbDataAdapter(DBCmd)
+            RecordCount = DBDATA.Fill(DBDTable)
+        Catch ex As Exception
+            Exception = ex.Message
+        End Try
+        'Close Connection with DB 
+        If DBCon.State = ConnectionState.Open Then DBCon.Close()
+    End Sub
+    'Include Query & Command Params
+    Public Sub AddParam(Name As String, Value As Object)
+        Dim Newparam As New OleDbParameter(Name, Value)
+        Params.Add(Newparam)
+    End Sub
+End Class
