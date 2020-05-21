@@ -1,0 +1,16 @@
+'Create a function and use it in the form
+    'Private function name (ByVal var1 As type ... , var2 As Type)
+    'Return  Operation usin var1 & var  2
+    'End function
+
+
+EXMEPLE :
+Private Function addnumbers(ByVal num1 As Integer, ByVal num2 As Integer)
+        Return num1 + num2
+    End Function
+    
+    in A button Add 
+    
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MessageBox.Show(addnumbers(TextBox1.Text, TextBox2.Text), "Result")
+    End Sub
