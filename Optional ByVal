@@ -1,0 +1,20 @@
+Public Class Form1
+    ' private sub name (ByVal variable As type, Optional ByVal variable As Type = "Optional Value")
+    'The Operation or sohw message you want
+    Private Sub ShowMessage(ByVal message As String, Optional ByVal title As String = "Main Title") ' private sub name (ByVal variable As type, Optional ByVal variable As Type = "Optional Value")
+        MessageBox.Show("       " & message, title)
+    End Sub
+
+    Private Sub ButtonShow_Click(sender As Object, e As EventArgs) Handles ButtonShow.Click
+        Dim msg As String = TextBoxMessage.Text  'Set Variable
+        Dim title As String = Nothing                                  ' Set Variable 
+        If TextBoxTitle.TextLength > 0 Then                 'if the main text is nothing  the program ill fill it with the optianal value above .
+            title = TextBoxTitle.Text
+            ShowMessage(msg, title)
+        Else
+            ShowMessage(msg)
+        End If
+    End Sub
+
+
+End Class
