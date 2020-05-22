@@ -1,0 +1,26 @@
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        
+**Numbers is a Listbox
+Numbers.Items.Clear()
+        Dim Number As Integer = 0
+        Count(Number)
+
+
+    End Sub
+
+    Private Sub Count(ByVal num As Integer)
+        While True
+
+            num += 1
+            Numbers.Items.Add(num)
+
+            If num >= 20 Then
+                Exit Sub
+
+            End If
+        End While
+
+    End Sub
+
+End Class
